@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A Telegram bot that uses a group as a file storage system. When a user uploads a file to the group, the bot replies with a public link. You can then share this link, and anyone who clicks on it will receive the file through the bot, making file sharing easy and efficient.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node --env-file .env.dev --watch index.js"
