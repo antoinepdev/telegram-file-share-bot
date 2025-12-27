@@ -11,8 +11,10 @@ function envVariablesValidator(envVariableKey, envVariableValue) {
     )
 }
 const botToken = process.env.BOT_TOKEN
+const storageGroup = process.env.STORAGE_GROUP
 envVariablesValidator("BOT_TOKEN", botToken)
+envVariablesValidator("STORAGE_GROUP", storageGroup)
 
 const bot = new TelegramBot(botToken, { polling: true })
 
-export { bot }
+export { bot, storageGroup }
