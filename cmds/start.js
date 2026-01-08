@@ -1,4 +1,5 @@
 import { bot, storageGroupId } from "../config.js"
+import { userBlocksBotError } from "../utils/errors/userBlocksBotError.js"
 import { isMsgPrivate } from "../validators/isMsgPrivate.js"
 
 bot.onText(/^\/start/, async (msg) => {
@@ -11,7 +12,8 @@ bot.onText(/^\/start/, async (msg) => {
   try {
     bot.copyMessage(userId, storageGroupId, fileId)
   } catch (error) {
-    console.error(error)
+    if (await userBlocksBotError(error)) return
+    else console.error(error)
   }
 })
 
