@@ -10,8 +10,8 @@ bot.onText(/^\/start/, async (msg) => {
 
   try {
     bot.copyMessage(userId, storageGroupId, fileId)
-  } catch (e) {
-    console.error(e)
+  } catch (error) {
+    console.error(error)
   }
 })
 
