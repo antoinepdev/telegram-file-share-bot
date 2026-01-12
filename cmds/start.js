@@ -10,7 +10,7 @@ bot.onText(/^\/start/, async (msg) => {
   if (fileId === null) return
 
   try {
-    bot.copyMessage(userId, storageGroupId, fileId)
+    await bot.copyMessage(userId, storageGroupId, fileId)
   } catch (error) {
     if (await userBlocksBotError(error)) return
     else console.error(error)
