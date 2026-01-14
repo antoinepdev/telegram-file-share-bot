@@ -34,7 +34,7 @@ The developer is not responsible for misuse of this tool.
 
 ### 1. Clone the Repository
 ```bash
-git git clone https://github.com/antoinepdev/telegram-file-share-bot.git
+git clone https://github.com/antoinepdev/telegram-file-share-bot.git
 cd telegram-file-share-bot
 ```
 
