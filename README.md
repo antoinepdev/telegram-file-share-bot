@@ -53,6 +53,7 @@ Create a `.env` file in the project root with the following variables:
 | `BOT_URL` | Public bot link (e.g., `https://t.me/YourBotName`) | Provided by @BotFather when creating the bot |
 | `SKIP_QUICK_AD_GUIDE_MESSAGE` | Message to instruct the user on how to skip the ad and obtain the file | |
 | `QUICK_AD_URL` | Advertisement url | Provided by your selected ad plataform |
+| `QUICK_AD_PROCESS_DURATION_IN_SECONDS` | Time it will take to send the file after sending the ad to the user (This variable is optional, default value is `15`) | |
 
 #### Example `.env` file:
 ```env
@@ -61,6 +62,7 @@ STORAGE_GROUP_ID=-10024748473658
 BOT_URL=https://t.me/birdsender_bot
 SKIP_QUICK_AD_GUIDE_MESSAGE=Your message
 QUICK_AD_URL=https://www.effectivegatecpm.com/ce8kxfkgea?key=0da32d578d6f7df6c2d628b53477fd34
+QUICK_AD_PROCESS_DURATION_IN_SECONDS=13
 ```
 
 ### 4. Start the Bot
