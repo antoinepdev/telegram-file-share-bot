@@ -13,7 +13,7 @@ function envVariablesValidator(envVariableKey, envVariableValue) {
 const botToken = process.env.BOT_TOKEN
 const storageGroupId = process.env.STORAGE_GROUP_ID
 const botUrl = process.env.BOT_URL
-const skipQuickAdGuideMessage = process.env.SKIP_QUICK_AD_GUIDE_MESSAGE
+const skipQuickAdGuideMessage = process.env.SKIP_QUICK_AD_GUIDE_MESSAGE.replace(/\\n/g, "\n")
 const quickAdUrl = process.env.QUICK_AD_URL
 const quickAdProcessDurationInSeconds = Number(process.env.QUICK_AD_PROCESS_DURATION_IN_SECONDS) || 15
 envVariablesValidator("BOT_TOKEN", botToken)
