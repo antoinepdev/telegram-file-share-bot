@@ -1,6 +1,7 @@
 import { quickAdUrl, skipQuickAdGuideMessage } from "../../config.js"
+import { sendMessage } from "../senders/sendMessage.js"
 
-export async function sendQuickAd(bot, userId) {
+export async function sendQuickAd(userId) {
   const inlineKeyboard = {
     reply_markup: {
       inline_keyboard: [
@@ -8,5 +9,5 @@ export async function sendQuickAd(bot, userId) {
       ],
     },
   }
-  await bot.sendMessage(userId, skipQuickAdGuideMessage, inlineKeyboard)
+  sendMessage(userId, skipQuickAdGuideMessage, inlineKeyboard)
 }

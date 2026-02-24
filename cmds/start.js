@@ -11,7 +11,7 @@ bot.onText(/^\/start/, async (msg) => {
   if (fileId === null) return
 
   try {
-    await sendQuickAd(bot, userId)
+    await sendQuickAd(userId)
     setTimeout(async () => {
       await bot.copyMessage(userId, storageGroupId, fileId)
     }, quickAdProcessDurationInSeconds * 1000)
