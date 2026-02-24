@@ -1,6 +1,5 @@
 import { bot, quickAdProcessDurationInSeconds, storageGroupId } from "../config.js"
 import { sendQuickAd } from "../utils/ads/quick.js"
-import { userBlocksBotError } from "../utils/errors/userBlocksBotError.js"
 import { copyMessage } from "../utils/senders/copyMessage.js"
 import { isMsgPrivate } from "../validators/isMsgPrivate.js"
 
@@ -17,8 +16,7 @@ bot.onText(/^\/start/, async (msg) => {
       copyMessage(userId, storageGroupId, fileId)
     }, quickAdProcessDurationInSeconds * 1000)
   } catch (error) {
-    if (await userBlocksBotError(error)) return
-    else console.error(error)
+    console.error(error)
   }
 })
 
